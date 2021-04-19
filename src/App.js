@@ -36,10 +36,10 @@ import "./App.css";
         calculate();
       }}/><br/>{inss ? <small> Salary Amount<br/></small> : ''}<br/>
 
-      <input placeholder='INSS' value={inss} /><br/>{inss ? <small>INSS 11% <br/></small> : ''}<br/>
-      <input placeholder='IRRF' value={irrf}/><br/>{irrf ? <small>IRRF 5% <br/></small> : ''}<br/>
+      <input placeholder='INSS' value={!salary ? '0,00': inss} /><br/>{inss ? <small>INSS 11% <br/></small> : ''}<br/>
+      <input placeholder='IRRF' value={!salary ? '0,00': irrf}/><br/>{irrf ? <small>IRRF 5% <br/></small> : ''}<br/>
 
-      {liquidSalary ?  <h4>Liquid salary: $ {liquidSalary}</h4> : ''}
+      {liquidSalary ?  <h4>Salário Liquído: $ {liquidSalary}</h4> : ''}
 
       <button onClick={clearState}>Clear values</button>
     </div>
